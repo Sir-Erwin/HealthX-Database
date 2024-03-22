@@ -1,0 +1,4 @@
+CREATE VIEW `EmployeeSchedule` AS
+SELECT *
+FROM EMPLOYEE_WorksIn_Clinic
+GROUP BY EID;

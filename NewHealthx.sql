@@ -17,6 +17,8 @@ USE `healthx` ;
 -- -----------------------------------------------------
 -- Table `healthx`.`DOCTOR`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`DOCTOR` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`DOCTOR` (
   `EID` INT UNSIGNED NOT NULL,
   `FName` VARCHAR(45) NOT NULL,
@@ -30,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `healthx`.`DOCTOR` (
   `Salary` INT NULL DEFAULT NULL,
   `MedicalLicenseNumber` INT UNSIGNED NOT NULL,
   `Deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '0 or 1',
-  `Password` VARCHAR(45) NOT NULL DEFAULT 'Password!',
+  `Passw` VARCHAR(45) NOT NULL DEFAULT 'Password!',
   PRIMARY KEY (`EID`),
   UNIQUE INDEX `EID_UNIQUE` (`EID` ASC) VISIBLE,
   UNIQUE INDEX `MedicalLicenseNumber_UNIQUE` (`MedicalLicenseNumber` ASC) VISIBLE)
@@ -40,6 +42,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`EMPLOYEE`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`EMPLOYEE` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`EMPLOYEE` (
   `EID` INT NOT NULL,
   `FName` VARCHAR(45) NOT NULL,
@@ -49,10 +53,10 @@ CREATE TABLE IF NOT EXISTS `healthx`.`EMPLOYEE` (
   `Gender` INT NULL DEFAULT NULL COMMENT '0 - Male\\\\\\\\n1 - Female\\\\\\\\n2 - NonBinary/GenderNeutral',
   `SSN` INT NULL DEFAULT NULL,
   `Contact` VARCHAR(45) NULL DEFAULT NULL,
-  `Role` INT NULL DEFAULT NULL,
+  `Role` INT NOT NULL COMMENT '0 - Admin\n1 - Lab Tech\n2 - Nurse / Medical Prof.\n3 - Front Desk\n4 - Maintenance\n5 - Miscelaneous\n\n6 - Contractor',
   `Salary` INT NULL DEFAULT NULL,
   `Deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '0 or 1',
-  `Password` VARCHAR(45) NOT NULL DEFAULT 'Password!',
+  `Passw` VARCHAR(45) NOT NULL DEFAULT 'Password!',
   PRIMARY KEY (`EID`),
   UNIQUE INDEX `EID_UNIQUE` (`EID` ASC) VISIBLE)
 ENGINE = InnoDB;
@@ -61,6 +65,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`PATIENT`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`PATIENT` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`PATIENT` (
   `PID` INT NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
@@ -76,7 +82,8 @@ CREATE TABLE IF NOT EXISTS `healthx`.`PATIENT` (
   `Email` VARCHAR(45) NOT NULL,
   `MailingAddress` VARCHAR(500) NULL DEFAULT NULL,
   `Deleted` TINYINT NOT NULL DEFAULT 0 COMMENT '0 or 1',
-  `Password` VARCHAR(45) NOT NULL DEFAULT 'Password!',
+  `Passw` VARCHAR(45) NOT NULL DEFAULT 'Password!',
+  `PreIntake` TINYINT NOT NULL COMMENT '0 - False\n1 - True',
   PRIMARY KEY (`PID`),
   INDEX `fk_PATIENT_DOCTOR_idx` (`PCP_EID` ASC) VISIBLE,
   CONSTRAINT `fk_PATIENT_DOCTOR`
@@ -92,6 +99,8 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 -- Table `healthx`.`CLINIC`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`CLINIC` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`CLINIC` (
   `clinic_name` VARCHAR(255) NULL DEFAULT NULL,
   `clinic_id` INT NOT NULL,
@@ -110,6 +119,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`APPOINTMENT`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`APPOINTMENT` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`APPOINTMENT` (
   `AID` INT NOT NULL,
   `PrimaryPhys` TINYINT NOT NULL COMMENT 'Bool',
@@ -145,6 +156,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`LAB_ACTION`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`LAB_ACTION` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`LAB_ACTION` (
   `Lab_Tech_EID` INT NOT NULL,
   `APPOINTMENT_AID` INT NOT NULL,
@@ -167,6 +180,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`PATHOLOGCAL_TEST`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`PATHOLOGCAL_TEST` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`PATHOLOGCAL_TEST` (
   `ID(RID)` VARCHAR(45) NOT NULL,
   `Name Of Test` VARCHAR(100) NOT NULL,
@@ -187,6 +202,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`VACCINATION`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`VACCINATION` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`VACCINATION` (
   `Vaccinator` VARCHAR(50) NOT NULL,
   `CID` INT NULL DEFAULT NULL,
@@ -216,6 +233,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`ANTIBODY_TEST_RESULT`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`ANTIBODY_TEST_RESULT` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`ANTIBODY_TEST_RESULT` (
   `RID` INT NOT NULL,
   `Disease` VARCHAR(100) NOT NULL,
@@ -238,6 +257,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`PRESCRIPTION`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`PRESCRIPTION` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`PRESCRIPTION` (
   `presc_name` VARCHAR(100) NULL DEFAULT NULL,
   `presc_id` INT NOT NULL,
@@ -266,6 +287,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`MEDICAL_HISTORY`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`MEDICAL_HISTORY` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`MEDICAL_HISTORY` (
   `MedHisID` INT NOT NULL,
   `Date` INT NOT NULL,
@@ -290,6 +313,8 @@ COMMENT = 'History of a patient';
 -- -----------------------------------------------------
 -- Table `healthx`.`SCAN_HIST`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`SCAN_HIST` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`SCAN_HIST` (
   `RID` INT NOT NULL,
   `Type` INT NULL DEFAULT NULL COMMENT '0 - X-Ray\\\\n1 - CT\\\\n2 - MRI',
@@ -310,6 +335,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`ALLERGY`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`ALLERGY` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`ALLERGY` (
   `Date Diagnosed` INT NOT NULL,
   `Doctor (medical licence number)` INT NOT NULL,
@@ -331,6 +358,8 @@ COMMENT = 'A table which talks about the various allergies patients have';
 -- -----------------------------------------------------
 -- Table `healthx`.`BLOOD_CNT_TST_RSLT`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`BLOOD_CNT_TST_RSLT` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`BLOOD_CNT_TST_RSLT` (
   `ID (RID)` INT NOT NULL,
   `Red cell blood count` INT NOT NULL,
@@ -364,6 +393,8 @@ COMMENT = 'Results of a blood examination';
 -- -----------------------------------------------------
 -- Table `healthx`.`PAYMENT`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`PAYMENT` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`PAYMENT` (
   `PayID` INT NOT NULL,
   `Total Amount` DECIMAL(10,2) NOT NULL,
@@ -374,6 +405,7 @@ CREATE TABLE IF NOT EXISTS `healthx`.`PAYMENT` (
   `Balance` DECIMAL(10,2) NOT NULL,
   `APPOINTMENT_AID` INT NOT NULL,
   `APPOINTMENT_PATIENT_PID` INT NOT NULL,
+  `Deleted` TINYINT NOT NULL COMMENT '0 - No\n1 - Yes',
   PRIMARY KEY (`PayID`, `APPOINTMENT_AID`, `APPOINTMENT_PATIENT_PID`),
   INDEX `fk_PAYMENT_APPOINTMENT1_idx` (`APPOINTMENT_AID` ASC, `APPOINTMENT_PATIENT_PID` ASC) VISIBLE,
   CONSTRAINT `fk_PAYMENT_APPOINTMENT1`
@@ -389,19 +421,21 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 -- Table `healthx`.`EMPLOYEE_WorksIn_CLINIC`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`EMPLOYEE_WorksIn_CLINIC` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`EMPLOYEE_WorksIn_CLINIC` (
-  `EMPLOYEE_EID` INT NOT NULL,
+  `EID` INT NOT NULL,
   `CLINIC_clinic_id` INT NOT NULL,
   `Day` TINYINT NOT NULL COMMENT '0-Sunday\\n...\\n6-Saturday',
   `Work_Hours_Start` TIME NOT NULL,
   `Work_Hours_End` TIME NOT NULL,
   `On_Call_Start` TIME NULL DEFAULT NULL,
   `On_Call_End` TIME NULL DEFAULT NULL,
-  PRIMARY KEY (`EMPLOYEE_EID`, `CLINIC_clinic_id`),
+  PRIMARY KEY (`EID`, `CLINIC_clinic_id`),
   INDEX `fk_EMPLOYEE_has_CLINIC_CLINIC1_idx` (`CLINIC_clinic_id` ASC) VISIBLE,
-  INDEX `fk_EMPLOYEE_has_CLINIC_EMPLOYEE1_idx` (`EMPLOYEE_EID` ASC) VISIBLE,
+  INDEX `fk_EMPLOYEE_has_CLINIC_EMPLOYEE1_idx` (`EID` ASC) VISIBLE,
   CONSTRAINT `fk_EMPLOYEE_has_CLINIC_EMPLOYEE1`
-    FOREIGN KEY (`EMPLOYEE_EID`)
+    FOREIGN KEY (`EID`)
     REFERENCES `healthx`.`EMPLOYEE` (`EID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -416,6 +450,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`EMERGENCY_CONTACT`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`EMERGENCY_CONTACT` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`EMERGENCY_CONTACT` (
   `Name` VARCHAR(45) NOT NULL,
   `PhoneNum` VARCHAR(16) NULL DEFAULT NULL,
@@ -435,6 +471,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`LAB_SCAN`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`LAB_SCAN` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`LAB_SCAN` (
   `Type` INT NULL DEFAULT NULL COMMENT '0 - X-Ray\\\\n1 - CT\\\\n2 - MRI',
   `File` BLOB NULL DEFAULT NULL,
@@ -453,19 +491,21 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `healthx`.`DOCTOR_WorksIn_CLINIC`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`DOCTOR_WorksIn_CLINIC` ;
+
 CREATE TABLE IF NOT EXISTS `healthx`.`DOCTOR_WorksIn_CLINIC` (
-  `DOCTOR_EID` INT UNSIGNED NOT NULL,
+  `EID` INT UNSIGNED NOT NULL,
   `CLINIC_clinic_id` INT NOT NULL,
   `Day` TINYINT NOT NULL COMMENT '0-Sunday\\n...\\n6-Saturday',
   `Work_Hours_Start` TIME NOT NULL,
   `Work_Hours_End` TIME NOT NULL,
   `On_Call_Start` TIME NULL DEFAULT NULL,
   `On_Call_End` TIME NULL DEFAULT NULL,
-  PRIMARY KEY (`DOCTOR_EID`, `CLINIC_clinic_id`),
+  PRIMARY KEY (`EID`, `CLINIC_clinic_id`),
   INDEX `fk_DOCTOR_has_CLINIC_CLINIC1_idx` (`CLINIC_clinic_id` ASC) VISIBLE,
-  INDEX `fk_DOCTOR_has_CLINIC_DOCTOR1_idx` (`DOCTOR_EID` ASC) VISIBLE,
+  INDEX `fk_DOCTOR_has_CLINIC_DOCTOR1_idx` (`EID` ASC) VISIBLE,
   CONSTRAINT `fk_DOCTOR_has_CLINIC_DOCTOR1`
-    FOREIGN KEY (`DOCTOR_EID`)
+    FOREIGN KEY (`EID`)
     REFERENCES `healthx`.`DOCTOR` (`EID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
@@ -476,6 +516,114 @@ CREATE TABLE IF NOT EXISTS `healthx`.`DOCTOR_WorksIn_CLINIC` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+USE `healthx` ;
+
+-- -----------------------------------------------------
+-- Placeholder table for view `healthx`.`EmployeeSchedule`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `healthx`.`EmployeeSchedule` (`id` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `healthx`.`DOCLoginDetails`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `healthx`.`DOCLoginDetails` (`EID` INT, `Passw` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `healthx`.`PATLoginDetails`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `healthx`.`PATLoginDetails` (`PID` INT, `Passw` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `healthx`.`EMPLoginDetails`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `healthx`.`EMPLoginDetails` (`EID` INT, `Passw` INT);
+
+-- -----------------------------------------------------
+-- View `healthx`.`EmployeeSchedule`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`EmployeeSchedule`;
+DROP VIEW IF EXISTS `healthx`.`EmployeeSchedule` ;
+USE `healthx`;
+CREATE  OR REPLACE VIEW `EmployeeSchedule` AS
+SELECT *
+FROM EMPLOYEE_WorksIn_Clinic
+GROUP BY EID;
+
+-- -----------------------------------------------------
+-- View `healthx`.`DOCLoginDetails`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`DOCLoginDetails`;
+DROP VIEW IF EXISTS `healthx`.`DOCLoginDetails` ;
+USE `healthx`;
+CREATE  OR REPLACE VIEW `DOCLoginDetails` AS
+SELECT DOCTOR.EID, DOCTOR.Passw
+FROM DOCTOR;
+
+-- -----------------------------------------------------
+-- View `healthx`.`PATLoginDetails`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`PATLoginDetails`;
+DROP VIEW IF EXISTS `healthx`.`PATLoginDetails` ;
+USE `healthx`;
+CREATE  OR REPLACE VIEW `PATLoginDetails` AS
+SELECT PATIENT.PID, PATIENT.Passw
+FROM PATIENT;
+
+-- -----------------------------------------------------
+-- View `healthx`.`EMPLoginDetails`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `healthx`.`EMPLoginDetails`;
+DROP VIEW IF EXISTS `healthx`.`EMPLoginDetails` ;
+USE `healthx`;
+CREATE  OR REPLACE VIEW `EMPLoginDetails` AS
+SELECT EMPLOYEE.EID, EMPLOYEE.Passw
+FROM EMPLOYEE
+;
+USE `healthx`;
+
+DELIMITER $$
+
+USE `healthx`$$
+DROP TRIGGER IF EXISTS `healthx`.`APPOINTMENT_BEFORE_INSERT` $$
+USE `healthx`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `healthx`.`APPOINTMENT_BEFORE_INSERT` BEFORE INSERT ON `APPOINTMENT` FOR EACH ROW
+BEGIN
+
+END
+$$
+
+
+USE `healthx`$$
+DROP TRIGGER IF EXISTS `healthx`.`PAYMENT_BEFORE_DELETE` $$
+USE `healthx`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `healthx`.`PAYMENT_BEFORE_DELETE` BEFORE DELETE ON `PAYMENT` FOR EACH ROW
+BEGIN
+
+END
+$$
+
+
+USE `healthx`$$
+DROP TRIGGER IF EXISTS `healthx`.`EMPLOYEE_WorksIn_CLINIC_BEFORE_UPDATE` $$
+USE `healthx`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `healthx`.`EMPLOYEE_WorksIn_CLINIC_BEFORE_UPDATE` BEFORE UPDATE ON `EMPLOYEE_WorksIn_CLINIC` FOR EACH ROW
+BEGIN
+
+END
+$$
+
+
+USE `healthx`$$
+DROP TRIGGER IF EXISTS `healthx`.`EMPLOYEE_WorksIn_CLINIC_BEFORE_DELETE` $$
+USE `healthx`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `healthx`.`EMPLOYEE_WorksIn_CLINIC_BEFORE_DELETE` BEFORE DELETE ON `EMPLOYEE_WorksIn_CLINIC` FOR EACH ROW
+BEGIN
+
+END
+$$
+
+
+DELIMITER ;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
