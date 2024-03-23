@@ -11,8 +11,8 @@ const App = ()=> {
         <tr>
           <th>ID</th>
           <th>Test_Name</th>
-          <th>Ordered_BY</th>
           <th>Result</th>
+          <th>Reference_Range</th>
         </tr>
       </thead>
       
@@ -21,8 +21,8 @@ const App = ()=> {
          <tr>
           <td>{contact.ID}</td>
           <td>{contact.Test_Name}</td>
-          <td>{contact.Ordered_BY}</td>
           <td>{contact.Result}</td>
+          <td>{contact.Reference_Range}</td>
           </tr>
           ))}
          
