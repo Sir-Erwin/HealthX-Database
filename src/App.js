@@ -10,9 +10,9 @@ const App = ()=> {
       <thead>
         <tr>
           <th>ID</th>
-          <th>First_Name</th>
-          <th>Last_Name</th>
-          <th>Date</th>
+          <th>Test_Name</th>
+          <th>Ordered_BY</th>
+          <th>Result</th>
         </tr>
       </thead>
       
@@ -20,9 +20,9 @@ const App = ()=> {
         {contacts.map((contact)=>(
          <tr>
           <td>{contact.ID}</td>
-          <td>{contact.First_Name}</td>
-          <td>{contact.Last_Name}</td>
-          <td>{contact.Date}</td>
+          <td>{contact.Test_Name}</td>
+          <td>{contact.Ordered_BY}</td>
+          <td>{contact.Result}</td>
           </tr>
           ))}
          
