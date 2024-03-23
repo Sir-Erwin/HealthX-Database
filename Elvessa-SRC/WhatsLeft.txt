@@ -1,0 +1,6 @@
+Backend to connect the web app to the database (somewhat done, need the http stuff added)
+Welcome page for the doctor, so they can see their account information, requests, patient information, and a calander
+Calander to see their upcoming appointments
+Requests to accept or deny tests or medication
+Account information (not a priority, but also may be the easiest to do)
+Registration form
