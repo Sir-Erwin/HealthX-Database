@@ -1,0 +1,11 @@
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.nav__link{
+    font: 10rem;
+    color: black;
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+.action__container {
+    grid-template-columns:repeat(4,1fr);
+    align-items: right center;
+    text-decoration: underline;
+    text-decoration-color: rgb(43, 137, 226);
+    padding: 1.875rem 2.5rem;
+    column-gap: 1.875rem;
+    margin-bottom: 5rem;
+    border:none;
+    margin: 10px;
+    border-radius: 40px;
+    justify-content: center;
+    height: 10px;
+    margin-left: 100px;
+    text-align: center;
+    min-height: 10vh;
+    border: 2px solid rgba(255,255,255,2);
+    row-gap: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: silver ;
+}
+
+.wrapper .History{
+    width: 420px;
+    padding: 30px 40px;
+}
+body {
+    margin: 10;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    font-family: "Play", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    background: lightblue;
+  }
+  
