@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+}
+
+#sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color: rgb(113, 99, 186, 255);
+}
+
+#sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+.logo{
+    color: white;
+    height: 80px;
+    padding: 16px 0px;
+}
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+
+}
+
+.menu li:hover {
+    background-color: #848383;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    gap: 1.5rem;
+}
+
+.add {
+    display: flex;
+}
+.add h1 {
+    padding: 10px 0;
+}
+
+.add a {
+    padding: 15px 0;
+    margin-left: 950px;
+}
+/*
+.add a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    gap: 1.5rem;
+}
+/*
+.add button {
+    align-self: flex-start;
+     padding: 1rem;
+    border-radius: 8px;
+}*/
