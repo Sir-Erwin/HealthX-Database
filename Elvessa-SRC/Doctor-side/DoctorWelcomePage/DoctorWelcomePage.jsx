@@ -1,16 +1,23 @@
 // page doctor will see when they log in
-import React from 'react';
+import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+import './DoctorWelcomePage.css';
 
 const DoctorWelcomePage = () =>{
-    const [doctorName, setDoctorName] = useState('');
+    const [doctorName, setDoctorName] = useState('John');
 
     return (
-       <div>
-        <h1>Welcome {doctorName}!</h1>
-        
-       </div>
-    )
-}
+        <>
+            <h1>Welcome {doctorName}!</h1>
+            <ul>
+                <li><Link to="/DoctorCalander">See your Calander</Link></li>
+                <li><Link to="/DoctorAccountInformation">Account Info</Link></li>
+                <li><Link to="/DoctorPatientInformation">Patient information</Link></li>
+                <li><Link to="/DoctorRequests">Current Requests</Link></li>
+            </ul>
+        </>
+    );
+};
 
 
 export default DoctorWelcomePage;
