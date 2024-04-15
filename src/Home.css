@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(59, 50, 57);
+    background-image: url(https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/631a5d4631d4c55a475f3e34_noise-50.png);
+}
+
+*{
+    text-align: center;
+}
+h1 {
+    color: white;
+}
+
+button {
+    margin-top: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: min-content;
+}
+
+button:hover {
+    background-color: rgb(113, 99, 186, 255);
+    cursor: pointer;
+}
