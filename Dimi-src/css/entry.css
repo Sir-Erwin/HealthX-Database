@@ -1,7 +1,62 @@
-body {
-    background-color: rgb(59, 50, 57);
+/*body {
+    background-color: #8a8b8c;
     background-image: url(https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/631a5d4631d4c55a475f3e34_noise-50.png);
+}*/
+* {
+    box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../home/sunrise.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+h1, p, label{
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+#main-logo {
+    width: 85%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-logo ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#main-logo ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+#main-logo ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: rgb(113, 99, 186, 255);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+#main-logo ul li:hover::after {
+    width: 100%;
+}
+
+
 h1 {
     text-align: center;
 }
@@ -15,15 +70,56 @@ form input {
     border-radius: 40px;
 }
 
+.input-box {
+    display: flex;
+    align-items: center;
+}
+
 #sign-up {
+    color: white;
     background-color: white;
-    width: 300px;
+    box-shadow: 5px 10px 50px grey;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    width: 700px;
     height: 480px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     padding: 30px;
+}
+
+#gender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ select {
+    color: white;
+    border: 2px solid grey;
+    border-left-color: rgb(40, 37, 37);
+    border-top-color: rgb(40, 37, 37);
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px 10px;
+    border-radius: 6px;
+    background: transparent;
+}
+
+select option {
+    color: black;
+}
+#sign-up input {
+    color: white;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px 10px;
+    border-radius: 6px;
+    background: transparent;
 }
 
 
@@ -38,7 +134,7 @@ button:hover {
 button {
     width: 100%;
     height: 40px;
-    border-radius: 40px;
+    border-radius: 6px;
     background: white;
     margin-top: 10px;
     margin-left: auto;
