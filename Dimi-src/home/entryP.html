@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Your Career in Web Development</title>
+    <link rel="stylesheet" href="../css/entry.css" />
+  </head>
+
+
+<body>
+  <script src="server.js"></script>
+  
+  <header>
+    <nav>
+      <div id="main-logo">
+        
+      <h1>HealthX</h1>
+
+        <ul id="categories">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="loginP.html">Log in</a></li>
+          <li><a href="entryP.html">Sign Up</a></li>
+        </ul>
+      </div>
+
+  </header>
+
+  <div id="sign-up">
+    <h1>Registration</h1>
+    <hr>
+  <form action="" class="info" id="emailFrom">
+    <div class="input-box">
+      <input type="text" name="First Name" id="fname" placeholder="First Name" required>
+    <br>
+    <input type="text" name="Middle Name" id="mname" placeholder="Middle Initial" maxlength="1" required>
+    <br>
+    </div>
+    
+
+    <div class="input-box">
+      <input type="text" name="Last Name" id="lname" placeholder="Last Name" required>
+    <br>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <br>
+    </div>
+    
+
+    <div class="input-box">
+      <input type="password" placeholder="Password"required>
+    <br>
+    <input type="tel" id="number" placeholder="Phone Number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required>
+    <br>
+    </div>
+    
+    <div class="input-box">
+      <!--<input type="text" id="role" placeholder="Jobe Role" required>-->
+      <select name="" id="">
+        <option value="" disabled selected hidden>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <br>
+      <input type="password" id="social" placeholder="Social Security Number" pattern="[0-9]{3}[0-9]{2}[0-9]{4}" required>
+      <br>
+    </div>
+    
+    <!--
+    <div class="input-box" id="gender">
+      <select name="" id="">
+        <option value="" disabled selected hidden>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+      <div id="gen">
+        <label for="gender">Gender</label>
+        <input type="radio" name="male" id="gender" value="male">
+        <label for="gender">Male</label>
+        <input type="radio" name="male" value="female">
+        <label for="gender">Female</label> <br>
+      </div>
+    -->
+    <a href="./loginP.html"><button type="submit" >Sign Up</button></a>
+  </form>
+  
+  <p id="message"></p>
+  </div>
+  
+
+    
+</body>
+</html>
