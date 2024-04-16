@@ -90,11 +90,6 @@ form input {
     padding: 30px;
 }
 
-#gender {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
  select {
     color: white;
