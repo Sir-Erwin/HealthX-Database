@@ -102,30 +102,65 @@
 
       <!-- Main -->
       <main class="main-container">
-        <div class="main-title">
-          <p class="font-weight-bold">EMPLOYEE</p>
-          <a href="add-employee.html">Add Employee</a>
-        </div>
-        <div class="data">
-          <div class="table-info">
-              <table>
-                  <thead>
-                      <tr>
-                          <th>EID</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Email</th>
-                          <th>Gender</th>
-                          <th>Phone Number</th>
-                          <th>Department</th>
-                      </tr>
-                  </thead>
-              </table>
-          </div>
-      </div>
+        <h2>Add Appointment</h2>
+        <form action="" class="info" id="emailFrom">
+            <div class="input-box">
+              <input type="text" name="First Name" id="fname" placeholder="Patient's Name" required>
+            <br>
+            </div>
 
-    
+            
+        
+            <div class="input-box">
+                <input type="date" name="Date" placeholder="YYYY-MM-DD" required>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Patient's Email" required>
+            <br>
+            </div>
+            
+        
+            <div class="input-box">
+              <input type="time" placeholder="Time"required>
+            <br>
+            <input type="tel" id="number" placeholder="Patient's Phone Number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required>
+            <br>
+            </div>
 
+            <div class="dropdown">
+                <div class="input-box">
+                    <!--<input type="text" id="role" placeholder="Jobe Role" required>-->
+                    <select name="" id="">
+                      <option value="" disabled selected hidden>Department</option>
+                      <option>Dermatologist</option>
+                      <option >Neurologist</option>
+                      <option>Cardiologist</option>
+                      <option>Ophthalmologist</option>
+                      <option>Orthopedic Surgery</option>
+                      <option>Dentist</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="" disabled selected hidden>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                  
+                    <br>
+                  </div>
+                    
+            </div>
+            
+          <!--
+              <div id="gen">
+                <label for="gender">Gender</label>
+                <input type="radio" name="male" id="gender" value="male">
+                <label for="gender">Male</label>
+                <input type="radio" name="male" value="female">
+                <label for="gender">Female</label> <br>
+              </div>
+            -->
+            <a href="login.html"><button type="button">CREATE APPOINTMENT</button></a>
+        
+          </form>
       </main>
       <!-- End Main -->
 

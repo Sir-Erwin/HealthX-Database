@@ -19,3 +19,13 @@ function validateForm() {
 emailInput.addEventListener('input', validateForm);
 passwordInput.addEventListener('input', validateForm);
 eidInput.addEventListener('input', validateForm);
+
+document.getElementById("eidInput").addEventListener("keyup", function(event) {
+  // Check if the Enter key (key code 13) is pressed
+  if (event.key === "Enter") {
+    // Prevent the default behavior of form submission
+    event.preventDefault();
+    // Simulate a click on the anchor link to navigate to the anchor
+    document.getElementById("loginButton").click();
+  }
+});

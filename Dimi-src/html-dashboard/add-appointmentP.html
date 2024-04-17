@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/dashboard1.css">
   </head>
@@ -49,101 +50,95 @@
   
           <div class="side-link">
             <ul class="sidebar-list">
-              <a href="dashboard.html">
+              <a href="dashboardP.html">
                   <li class="sidebar-list-item">
                       <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                   </li>
               </a>
-              <a href="doctor.html">
-                  <li class="sidebar-list-item">
-                      <i class="fa fa-user-md"></i>
-                          <span>Doctors</span>
-                    </li>
-              </a>
-              <a href="appointment.html">
+              <a href="appointmentP.html">
                   <li class="sidebar-list-item">
                       <i class="fa fa-calendar"></i>
                       <span>Appointments</span>
                     </li>
               </a>
-              <a href="department.html">
-                  <li class="sidebar-list-item">
-                      <i class="fa fa-building"></i>
-                          <span>Department</span>
-                    </li>
-              </a>
-              <a href="employee.html">
-                <li class="sidebar-list-item">
-                  <i class="fa fa-users"></i>
-                  <span>Employees</span>
-                </li>
-              </a>
-              <a href="payment.html">
+              <a href="paymentP.html">
                 <li class="sidebar-list-item">
                   <i class="fa fa-credit-card"></i>
                   <span>Payment</span>
                 </li>
               </a>
-              <a href="report.html">
-                <li class="sidebar-list-item">
-                  <i class="fa fa-file"></i>
-                  <span>Reports</span>
-                </li>
-              </a>
             </ul>
           </div>
         </div>
-        
-      <a href="../home/login.html" class="sidebar-list-item">
-        <i class="fa fa-sign-out"></i>
-        <span>Logout</span>
-      </a>
+        <a href="../home/loginP.html" class="sidebar-list-item">
+          <i class="fa fa-sign-out"></i>
+          <span>Logout</span>
+        </a>
       </aside>
       <!-- End Sidebar -->
 
       <!-- Main -->
       <main class="main-container">
-        <div class="main-title">
-          <p class="font-weight-bold">DASHBOARD</p>
-        </div>
-
-        <div class="main-cards">
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">DOCTORS</p>
-              <i class="fa fa-user-md"></i>
+        <h2>Add Appointment</h2>
+        <form action="" class="info" id="emailFrom">
+            <div class="input-box">
+              <input type="text" name="First Name" id="fname" placeholder="Patient's Name" required>
+            <br>
             </div>
-            <span class="text-primary font-weight-bold">-</span>
-          </div>
 
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">APPOINTMENTS</p>
-              <i class="fa fa-calendar"></i>
+            
+        
+            <div class="input-box">
+                <input type="date" name="Date" placeholder="YYYY-MM-DD" required>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Patient's Email" required>
+            <br>
             </div>
-            <span class="text-primary font-weight-bold">-</span>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">EMPLOYEES</p>
-              <i class="fa fa-users"></i>
+            
+        
+            <div class="input-box">
+              <input type="time" placeholder="Time"required>
+            <br>
+            <input type="tel" id="number" placeholder="Patient's Phone Number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required>
+            <br>
             </div>
-            <span class="text-primary font-weight-bold">-</span>
-          </div>
 
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">TREATED</p>
-              <i class="fa fa-stethoscope"></i>
+            <div class="dropdown">
+                <div class="input-box">
+                    <!--<input type="text" id="role" placeholder="Jobe Role" required>-->
+                    <select name="" id="">
+                      <option value="" disabled selected hidden>Department</option>
+                      <option>Dermatologist</option>
+                      <option >Neurologist</option>
+                      <option>Cardiologist</option>
+                      <option>Ophthalmologist</option>
+                      <option>Orthopedic Surgery</option>
+                      <option>Dentist</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="" disabled selected hidden>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                  
+                    <br>
+                  </div>
+                    
             </div>
-            <span class="text-primary font-weight-bold">-</span>
-          </div>
-
-        </div>
-
+            
+          <!--
+              <div id="gen">
+                <label for="gender">Gender</label>
+                <input type="radio" name="male" id="gender" value="male">
+                <label for="gender">Male</label>
+                <input type="radio" name="male" value="female">
+                <label for="gender">Female</label> <br>
+              </div>
+            -->
+            <a href="login.html"><button type="button">CREATE APPOINTMENT</button></a>
+        
+          </form>
       </main>
       <!-- End Main -->
 

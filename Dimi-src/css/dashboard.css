@@ -4,7 +4,6 @@
     border: none;
     outline: none;
     box-sizing: border-box;
-
 }
 
 body {
@@ -59,9 +58,21 @@ body {
     gap: 1.5rem;
 }
 
+.header {
+    width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+/*
 .add {
     display: flex;
-}
+}*/
 .add h1 {
     padding: 10px 0;
 }
@@ -84,3 +95,44 @@ body {
      padding: 1rem;
     border-radius: 8px;
 }*/
+
+.doctor .row {
+    margin: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.doctor button {
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(113, 99, 186, 255);
+    padding: 10px;
+}
+
+.doctor button:hover {
+    cursor: pointer;
+    background-color: rgb(77, 66, 129);
+}
+.table {
+    width: 100%;
+}
+table {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgb(113, 99, 186);
+    color: white;   
+}
+th {
+    padding: 15px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background: white;
+}

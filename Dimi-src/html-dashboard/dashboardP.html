@@ -1,38 +1,133 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Your Career in Web Development</title>
-    <link rel="stylesheet" href="../css/dashboard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-  </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
 
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/dashboard1.css">
+  </head>
   <body>
-    <div id="sidebar">
-      <div class="logo">
-        <h1>HX</h1>
-      </div>
-      <ul class="menu">
-        <li>
-          <a href="#">
-            <i class="fas fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-calendar"></i>
-            <span>Appointments</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fas fa-hand-holding-usd"></i>
-            <span>Payment</span>
-          </a>
-        </li>
-      </ul>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+            <a href="../home/home.html">
+                <i class="fa fa-search"></i>
+              </a>
+        </div>
+        <div class="header-right">
+            <a href="../home/home.html">
+                <i class="fa fa-home"></i>
+              </a>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div>
+          <div class="sidebar-title">
+            <div class="sidebar-brand">
+              <i class="fa fa-heartbeat"></i>
+              <span>HealthX</span>
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+          </div>
+  
+          <div class="side-link">
+            <ul class="sidebar-list">
+              <a href="dashboardP.html">
+                  <li class="sidebar-list-item">
+                      <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                  </li>
+              </a>
+              <a href="appointmentP.html">
+                  <li class="sidebar-list-item">
+                      <i class="fa fa-calendar"></i>
+                      <span>Appointments</span>
+                    </li>
+              </a>
+              <a href="paymentP.html">
+                <li class="sidebar-list-item">
+                  <i class="fa fa-credit-card"></i>
+                  <span>Payment</span>
+                </li>
+              </a>
+            </ul>
+          </div>
+        </div>
+        <a href="../home/loginP.html" class="sidebar-list-item">
+          <i class="fa fa-sign-out"></i>
+          <span>Logout</span>
+        </a>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">DOCTORS</p>
+              <i class="fa fa-user-md"></i>
+            </div>
+            <span class="text-primary font-weight-bold">-</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">APPOINTMENTS</p>
+              <i class="fa fa-calendar"></i>
+            </div>
+            <span class="text-primary font-weight-bold">-</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">EMPLOYEES</p>
+              <i class="fa fa-users"></i>
+            </div>
+            <span class="text-primary font-weight-bold">-</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">TREATED</p>
+              <i class="fa fa-stethoscope"></i>
+            </div>
+            <span class="text-primary font-weight-bold">-</span>
+          </div>
+
+        </div>
+
+      </main>
+      <!-- End Main -->
+
     </div>
-    
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
   </body>
 </html>
