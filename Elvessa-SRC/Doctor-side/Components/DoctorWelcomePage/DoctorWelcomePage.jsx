@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import './DoctorWelcomePage.css';
 
+
 const DoctorWelcomePage = () =>{
     const [doctorName, setDoctorName] = useState('John');
 
@@ -10,9 +11,9 @@ const DoctorWelcomePage = () =>{
         <>
             <h1>Welcome {doctorName}!</h1>
             <ul>
-                <li><Link to="/DoctorCalander">See your Calander</Link></li>
+                <li><Link to="/DoctorCalendar">See your Calander</Link></li>
                 <li><Link to="/DoctorAccountInformation">Account Info</Link></li>
-                <li><Link to="/DoctorPatientInformation">Patient information</Link></li>
+                <li><Link to="/Patientlist">Patient information</Link></li>
                 <li><Link to="/DoctorRequests">Current Requests</Link></li>
             </ul>
         </>
