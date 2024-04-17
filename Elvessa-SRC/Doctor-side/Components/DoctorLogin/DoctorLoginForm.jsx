@@ -1,11 +1,17 @@
 // Basic login form, will make visually appealing later 
 import React from 'react';
-import './LoginForm.css';
+import './DoctorLoginForm.css';
 
-const LoginForm = () => {
+const LoginForm = ({ handleLogin }) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Call handleLogin function passed from parent component
+        handleLogin();
+    };
+
     return (
         <div className='wrapper'>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <h1>Doctor Login</h1>
                 <div className="input-box">
                     <input type="text" placeholder='EID' required />
