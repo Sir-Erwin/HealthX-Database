@@ -1,0 +1,34 @@
+[
+    {
+       "EnzymeType": "AST,U/L",
+       "ElevatedLiverEnzymeLevel":"74.59 ± 86.95",
+       "NormalLiverEnzymeLevel":"36.07 ± 28.26",
+       "P": "0.000"
+    },
+    {
+       "EnzymeType": "ALT,U/L",
+       "ElevatedLiverEnzymeLevel":"85.4 ± 133.07",
+       "NormalLiverEnzymeLevel":"34.64 ± 21.46",
+       "P": "0.002"
+        
+    },
+    {
+       "EnzymeType": "ALP,U/L",
+       "ElevatedLiverEnzymeLevel":"353.11 ± 243.75",
+       "NormalLiverEnzymeLevel":"139.22 ± 68.45",
+       "P":  "0.000" 
+    },
+    {
+        "EnzymeType": "Bilirubin,umol/L",
+        "ElevatedLiverEnzymeLevel":"35.75 ± 74.65",
+        "NormalLiverEnzymeLevel":"11.11 ± 11.21",
+        "P": "0.006"
+    },
+    {
+        "EnzymeType": "Albumin, g/L",
+        "ElevatedLiverEnzymeLevel":"36.67 ± 7.06",
+        "NormalLiverEnzymeLevel":"37.66 ± 5.29",
+        "P": "0.430"
+    }
+   
+  ]

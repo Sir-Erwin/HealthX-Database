@@ -1,0 +1,44 @@
+[
+    {
+        "Testname": "ALP",
+        "Report": "62",
+        "Units": "U/L",
+        "Ref": "35-110"
+      },
+      {
+        "Testname": "GTT",
+        "Report": "66",
+        "Units": "U/L",
+        "Ref": "5-50"
+      },
+      {
+        "Testname": "ALT",
+        "Report": "20",
+        "Units": "U/L",
+        "Ref": "5-40"
+      },
+      {
+        "Testname": "AST",
+        "Report": "27",
+        "Units": "U/L",
+        "Ref": "10-40"
+      },
+      {
+        "Testname": "Protein",
+        "Report": "75",
+        "Units": "g/L",
+        "Ref": "66-83"
+      },
+      {
+        "Testname": "Albumin",
+        "Report": "44",
+        "Units": "g/L",
+        "Ref": "36-47"
+      },
+      {
+        "Testname": "Globulin",
+        "Report": "31",
+        "Units": "g/L",
+        "Ref": "26-41"
+      }
+    ]
