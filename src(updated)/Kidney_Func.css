@@ -1,0 +1,67 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    text-decoration-color: grey;
+    
+  }
+  .app-container h1{
+    font-size: 20px;
+    color: black;
+  }
+  .app-container h2{
+    font-size: medium;
+  }
+  button {
+    margin-top: 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: min-content;
+  }
+
+  button:hover {
+    background-color: rgb(113, 99, 186, 255);
+    cursor: pointer;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+    border-style:double;
+  }
+  .app-container button{
+    text-decoration: underline;
+    min-height: fit-content;
+  }
+  th,
+  td {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+  }
+  
+  th {
+    background-color: rgba(117, 20, 139, 0.407);
+  }
+  
+  td {
+    background-color: rgb(239, 245, 248);
+  }
+  
+  form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  form * {
+    font-size: 28px;
+  }
