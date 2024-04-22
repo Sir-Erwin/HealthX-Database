@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Enzyme Level</title>
+    <link rel="stylesheet" href="LiverEny.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>RID: 19473</h1>
+        <h2>Liver Enzyme Level</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Enzyme Type</th>
+                    <th>Elevated Liver Enzyme Level</th>
+                    <th>Normal Liver Enzyme Level</th>
+                    <th>P</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AST, U/L</td>
+                    <td>74.59 ± 86.95</td>
+                    <td>36.07 ± 28.26</td>
+                    <td>0.000</td>
+                </tr>
+                <tr>
+                    <td>ALT, U/L</td>
+                    <td>85.4 ± 133.07</td>
+                    <td>34.64 ± 21.46</td>
+                    <td>0.002</td>
+                </tr>
+                <tr>
+                    <td>ALP, U/L</td>
+                    <td>353.11 ± 243.75</td>
+                    <td>139.22 ± 68.45</td>
+                    <td>0.000</td>
+                </tr>
+                <tr>
+                    <td>Bilirubin, umol/L</td>
+                    <td>35.75 ± 74.65</td>
+                    <td>11.11 ± 11.21</td>
+                    <td>0.006</td>
+                </tr>
+                <tr>
+                    <td>Albumin, g/L</td>
+                    <td>36.67 ± 7.06</td>
+                    <td>37.66 ± 5.29</td>
+                    <td>0.430</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="handleClick()">SAVE</button>
+        <button onclick="handleClickAgain()">COMPLETE</button>
+    </div>
+
+    <script>
+        function handleClick() {
+            console.log('save');
+        }
+
+        function handleClickAgain() {
+            console.log('complete');
+        }
+    </script>
+</body>
+</html>

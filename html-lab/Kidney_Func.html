@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Function Test Result</title>
+    <link rel="stylesheet" href="Kidney_Func.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>RID: 19372</h1>
+        <h2>Kidney_Func-Test</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Test Type</th>
+                    <th>Result</th>
+                    <th>Units</th>
+                    <th>Reference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sodium</td>
+                    <td>142</td>
+                    <td>mmol/L</td>
+                    <td>135-145</td>
+                </tr>
+                <tr>
+                    <td>Potassium</td>
+                    <td>4.4</td>
+                    <td>mmol/L</td>
+                    <td>3.5-5.5</td>
+                </tr>
+                <tr>
+                    <td>Chloride</td>
+                    <td>80</td>
+                    <td>mmol/L</td>
+                    <td>95-110</td>
+                </tr>
+                <tr>
+                    <td>Bicarbonate</td>
+                    <td>28</td>
+                    <td>mmol/L</td>
+                    <td>20-32</td>
+                </tr>
+                <tr>
+                    <td>Urea</td>
+                    <td>5.8</td>
+                    <td>mmol/L</td>
+                    <td>3.0-8.0</td>
+                </tr>
+                <tr>
+                    <td>Creatinine</td>
+                    <td>85</td>
+                    <td>umol/L</td>
+                    <td>60-110</td>
+                </tr>
+                <tr>
+                    <td>eGFR</td>
+                    <td>>90</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Anion Gap</td>
+                    <td>18</td>
+                    <td>mmol/L</td>
+                    <td>10-20</td>
+                </tr>
+                <tr>
+                    <td>Bilirubin</td>
+                    <td>17</td>
+                    <td>umol/L</td>
+                    <td>4-20</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="handleClick()">SAVE</button>
+        <button onclick="handleClickAgain()">COMPLETE</button>
+    </div>
+
+    <script>
+        function handleClick() {
+            console.log('save');
+        }
+
+        function handleClickAgain() {
+            console.log('complete');
+        }
+    </script>
+</body>
+</html>
