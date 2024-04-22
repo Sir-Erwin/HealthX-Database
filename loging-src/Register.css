@@ -1,0 +1,79 @@
+App {
+    text-align: center;
+  }  
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:xx-large;
+    color: white;
+}
+.wrapper{
+    width: 400px;
+    
+    border: none;
+    outline: none;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+ .wrapper h1{
+    text-align: center;
+    font-size: 25px;
+ }
+
+.wrapper .inputBox{
+    height: 40px;
+    width: 375px;   
+    margin: 30px 0;
+    align-content: center;
+    position: relative;
+
+    background: transparent;
+    outline: none;
+    border: 2px solid ;
+    border-radius: 40px;
+}
+
+.inputBox input{
+    outline: none;
+    border: none;
+
+    height: 150%;
+    width: 80%;
+    padding-left: 10px;    
+
+    background: transparent;
+}
+
+.inputBox input::placeholder{
+    display: flex;
+    align-content:center;
+    justify-content: center;
+    font-size: large;
+}
+
+
+.wrapper a{
+    text-decoration: none;
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+.wrapper button{
+    width: 375px;
+    height: 300px;
+    margin: 20px 0;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
