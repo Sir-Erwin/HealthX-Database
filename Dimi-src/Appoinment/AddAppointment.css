@@ -1,0 +1,48 @@
+/* Style for input boxes */
+.info {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for input boxes */
+.input-box {
+    margin-bottom: 15px;
+}
+body{
+    background-color: lavender;
+}
+h1{
+    text-align: center;
+}
+.input-box input[type="text"],
+.input-box input[type="email"],
+.input-box input[type="date"],
+.input-box input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    background-color: #95c6fa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: gray;
+    
+}
