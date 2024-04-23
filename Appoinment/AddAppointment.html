@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Add Appointment</title>
+    <link rel="stylesheet" href="./AddAppointment.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="main-logo">
+                <h1>HealthX</h1>
+            </div>
+        </nav>
+    </header>
+
+    <div id="add-appointment">
+        <h1>Add Appointment</h1>
+        <hr>
+        <form action="/add-appointment" method="POST" class="info">
+            <!-- Appointment form fields here -->
+            <form action="/add-appointment" method="POST" class="info">
+                <div class="input-box">
+                    <input type="text" name="patientName" placeholder="Patient's Name" required>
+                    <br>
+                </div>
+                <div class="input-box">
+                    <input type="date" name="appointmentDate" placeholder="Appointment Date" required>
+                    <br>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="patientEmail" placeholder="Patient's Email" required>
+                    <br>
+                </div>
+                <div class="input-box">
+                    <input type="time" name="appointmentTime" placeholder="Appointment Time" required>
+                    <br>
+                </div>
+                <br><button type="submit">Add Appointment</button> </br>
+                <br><button type="submit"><a href="ViewAppointment.html">View Appointments</a></button> </br>
+                <br><button type="submit"><a href="CancelAppointment.html">Cancel Appointments</a></button> </br>
+        </form>
+        <p id="message"></p>
+    </div>
+</body>
+</html>
